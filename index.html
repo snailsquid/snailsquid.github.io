@@ -12,6 +12,9 @@
             width: 100%;
             margin:0;
         }
+        body a {
+            text-decoration: none;
+        }
         .navbar{
             z-index: 1;
             position:fixed;
@@ -24,20 +27,26 @@
             font-weight: bold;
             justify-content:space-between;
             height: 50px;
+            flex-wrap: nowrap;
         }
         .navbar li{
-            display: inline-flex;
-            flex-wrap: wrap;
-            flex-direction: column;
             list-style: none;
             text-align: right;
             color: white;
             height: 100%;
+            margin: auto 5px;
         }
-        .title {
+        .navbar ul {
+            display: inline-flex;
+            flex-direction: row;
+        }
+        .title a{
             font-size: 21px;
             display: inline-flex;
             color: #32A2E8;
+        }
+        .title a:hover {
+            text-decoration: white underline;
         }
         .title span{
             color: white;
@@ -69,9 +78,9 @@
             width: 100%;
         }
         .hero-image img {
-            height:auto;
+            height:100%;
             max-height: 500px;
-            width: 60%;
+            width: auto;
             max-width: 500px;
         }
         #arrow div {
@@ -79,10 +88,19 @@
             border: 2px solid #32A2E8;
             border-radius: 20px;
         }
+        #arrow:hover div {
+            background-color: #32A2E8;
+        }
         #store div {
             padding: 2px 40px;
             border: 2px solid #32A2E8;
             border-radius: 20px;
+        }
+        #store a {
+            color: white;
+        }
+        #store:hover div{
+            background-color: #32A2E8;
         }
         .join {
             height: 3%;
@@ -101,9 +119,6 @@
             color: white;
             font-weight: bold;
         }
-        #join-text:link {
-            text-decoration: none;
-        }
         .join:hover {
             background-color: white;
             color:#32A2E8;
@@ -112,10 +127,10 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="title">Ark<span>SMP</span></div>
+        <div class="title"><a href="">Ark<span>SMP</span></a></div>
         <ul>
-            <li id="arrow"><div class="list-item"><img src="/Polygon 2.png" alt="Arrow"></div></li>
-            <li id="store"><div class="list-item">Store</div></li>
+            <li id="arrow"><a href=""><div class="list-item"><img src="/Polygon 2.png" alt="Arrow"></div></a></li>
+            <li id="store"><a href=""><div class="list-item">Store</div></a></li>
         </ul>
     </div>
     <div class="hero">
@@ -123,11 +138,11 @@
             <img src="/arksmpLogo.png" alt="Logo">
         </div>
         <a href="#" id="join-text">
-        <div class="join">
-            <div id="join-button">
-                Join
+            <div class="join">
+                <div id="join-button">
+                    Join
+                </div>
             </div>
-        </div>
         </a>
     </div>
 </body>
