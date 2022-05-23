@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100%;
+            width: 100%;
+            margin:0;
+        }
+        body a {
+            text-decoration: none;
+            
+        }
+        .navbar{
+            z-index: 1;
+            position:fixed;
+            right: 0;
+            left: 0;
+            padding: 10px 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-weight: bold;
+            justify-content:space-between;
+            height: 50px;
+            flex-wrap: nowrap;
+        }
+        .navbar li{
+            list-style: none;
+            text-align: right;
+            color: white;
+            height: 100%;
+        }
+        .navbar ul {
+            display: inline-flex;
+            flex-direction: row;
+        }
+        .title a{
+            transition: all 0.2s ease;
+            font-size: 21px;
+            display: inline-flex;
+            color: #32A2E8;
+        }
+        .title::after {
+            content: "";
+            position: relative;
+            top: 0;
+            left: 0;
+            display: block;
+            height: 0.3px;
+            background-color: white;
+            transition: all 0.2s ease;
+            width: 0px;
+            color: white;
+        }
+        .title:hover::after {
+            width: 100%;
+        }
+        .title span{
+            color: white;
+        }
+        #arrow div {
+            padding: 2px 6px;
+            border: 2px solid #32A2E8;
+            border-radius: 20px;
+            margin: auto 5px;
+            transition: all 0.2s ease;
+        }
+        #arrow:hover div {
+            background-color: #32A2E8;
+        }
+        #user div {
+            padding: 2px 10px;
+            border-radius: 20px;
+            transition: all 0.2s ease;
+        }
+        #user a {
+            color: white;
+        }
+        .hero {
+            z-index: -1;
+            position: absolute;
+            background-image:url(/common/assets/background.png);
+            background-position: center;
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-color: black;
+            height: max-content;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="title"><a href="">Ark<span>SMP</span></a></div>
+        <ul>
+            <li id="user"><a href=""><div class="list-item">Name</div></a></li>
+            <li id="arrow"><a href=""><div class="list-item"><img src="/common/assets/Polygon 2.png" alt="Arrow"></div></a></li>
+        </ul>
+    </div>
+    <div class="hero">
+        .Dragon
+    </div>
+</body>
+</html>
